@@ -42,6 +42,30 @@ const survey = [
       "In my area of work, decisions and actions are systematically geared toward creating value for BMW Group customers.",
       "In my area of work, we make sure BMW Group products achieve the highest quality.",
     ]
+  },
+  {
+    heading: "HPO Processes",
+    statements: [
+      "In my area of work, priorities are clearly defined.",
+      "Processes in my area of work are effective and unbureaucratic.",
+      "Processes are designed in a way that allows me to work well and effectively with process partners.",
+      "Processes in my area of work are continuously being improved."
+    ]
+  },
+  {
+    heading: "HPO Culture",
+    statements: [
+      "At the BMW Group, I feel that my work is important."
+    ]
+  },
+  {
+    heading: "HPO Leader",
+    statements: [
+      "My manager makes sure everyone works together to achieve the best results.",
+      "My manager develops the skills of all team members, regardless of differences in gender, age, professional background, nationality, etc.",
+      "I receive praise and appreciative feedback from my manager when I do good work.",
+      "My manager is able to inspire me with the ideas and targets of the company."
+    ]
   }
   // Add more sections and statements as needed
 ];
