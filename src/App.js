@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import './App.css';
 import SurveySection from './components/SurveySection';
@@ -41,15 +40,15 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Employee Satisfaction Survey</h1>
+    <div className="App container">
+      <h1 className="text-center my-4">Employee Satisfaction Survey</h1>
       <form onSubmit={handleSubmit}>
         {survey.map((section, index) => (
           <SurveySection key={index} section={section} />
         ))}
-        <button type="submit">Submit</button>
+        <button type="submit" className="btn btn-primary mt-3">Submit</button>
       </form>
-      <h2>Survey Responses</h2>
+      <h2 className="mt-4">Survey Responses</h2>
       <pre>{JSON.stringify(responses, null, 2)}</pre>
     </div>
   );
