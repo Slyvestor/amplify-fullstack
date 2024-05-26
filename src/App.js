@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import SurveySection from './components/SurveySection';
 import Sidebar from './components/Sidebar';
-import Footer from './components/Footer';
+
 
 const survey = [
   {
@@ -82,12 +82,6 @@ const survey = [
       "In my area of work, mistakes are viewed as an opportunity to learn and improve.",
       "In my area of work, we make sure BMW Group products achieve the highest quality.",
       "In my area of work, decisions and actions are systematically geared toward creating value for internal customers."
-    ]
-  },
-  {
-    heading: "Digitalization",
-    statements: [
-      "In my area of work, the advantages of digitalization are used to best effect."
     ]
   },
   {
@@ -174,6 +168,8 @@ function App() {
           <Sidebar survey={survey} setSelectedSection={setSelectedSection} />
         </div>
         <div className="col-md-9">
+          {/* Remove or comment out this line */}
+          {/* <h1 className="text-center my-4">Employee Satisfaction Survey</h1> */}
           <form onSubmit={handleSubmit}>
             <SurveySection section={selectedSection} />
             <button type="submit" className="btn btn-primary mt-3">Submit</button>
@@ -182,7 +178,6 @@ function App() {
           <pre>{JSON.stringify(responses, null, 2)}</pre>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
