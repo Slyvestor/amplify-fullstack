@@ -1,5 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-
 function SurveyStatement({ statement }) {
   return (
     <div className="survey-statement">
