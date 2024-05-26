@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
 import SurveySection from './components/SurveySection';
 
 const survey = [
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <div className="App container">
+      <Header />
       <h1 className="text-center my-4">Employee Satisfaction Survey</h1>
       <form onSubmit={handleSubmit}>
         {survey.map((section, index) => (
