@@ -7,7 +7,7 @@ body {
 
 .App {
   padding: 20px;
-  color: white; /* This ensures text is visible on the darker background */
+  color: white;
 }
 
 .header {
@@ -25,7 +25,7 @@ body {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  color: black; /* Ensures the text within the sections is readable */
+  color: black;
 }
 
 .survey-section h2 {

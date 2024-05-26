@@ -40,7 +40,6 @@ const survey = [
       "I have full confidence in the Board of Management of the BMW Group.",
       "In my area of work, decisions and actions are systematically geared toward creating value for BMW Group customers.",
       "In my area of work, we make sure BMW Group products achieve the highest quality.",
-
     ]
   }
   // Add more sections and statements as needed
