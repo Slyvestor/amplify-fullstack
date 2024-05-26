@@ -1,30 +1,11 @@
-import React, { useState } from 'react';
-import SurveyStatement from './SurveyStatement';
-import { Collapse } from 'react-bootstrap';
+import React from 'react';
 
-function SurveySection({ section }) {
-  const [open, setOpen] = useState(false);
-
+const Header = () => {
   return (
-    <div className="survey-section mb-4">
-      <h2
-        className="h4 mb-3"
-        onClick={() => setOpen(!open)}
-        style={{ cursor: 'pointer' }}
-        aria-controls={`collapse-${section.heading}`}
-        aria-expanded={open}
-      >
-        {section.heading}
-      </h2>
-      <Collapse in={open}>
-        <div id={`collapse-${section.heading}`}>
-          {section.statements.map((statement, index) => (
-            <SurveyStatement key={index} statement={statement} />
-          ))}
-        </div>
-      </Collapse>
+    <div className="header">
+      <img src={`${process.env.PUBLIC_URL}/header.svg`} alt="ESS Feedback Header" className="img-fluid" />
     </div>
   );
-}
+};
 
-export default SurveySection;
+export default Header;
