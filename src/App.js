@@ -84,12 +84,6 @@ const survey = [
     ]
   },
   {
-    heading: "Digitalization",
-    statements: [
-      "In my area of work, the advantages of digitalization are used to best effect."
-    ]
-  },
-  {
     heading: "Sustainability",
     statements: [
       "In my opinion, the BMW Group accepts its responsibility towards society and considers social matters.",
