@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Footer = () => {
+const Header = () => {
   return (
-    <footer className="footer">
-      <p>&copy; 2024 BMW Group. All rights reserved.</p>
-      <p>Developed by Sylvestor Sehlare Im Auftrag von / by order of TX-R-1-S</p>
-    </footer>
+    <div className="header">
+      <img src={`${process.env.PUBLIC_URL}/EssHeader5.png`} alt="Header" />
+      <div className="header-gradient"></div>
+    </div>
   );
 };
 
-export default Footer;
+export default Header;
