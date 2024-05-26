@@ -1,11 +1,12 @@
 import React from 'react';
+import logo from '../assets/header-logo.png'; // Replace with your actual image path
 
-const Header = () => {
+function Header() {
   return (
-    <div className="header">
-      <img src={`${process.env.PUBLIC_URL}/EssHeader.png`}/>
-    </div>
+    <header className="header">
+      <img src={logo} alt="Header Logo" className="header-logo" />
+    </header>
   );
-};
+}
 
 export default Header;
