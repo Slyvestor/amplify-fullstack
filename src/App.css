@@ -52,10 +52,11 @@ body {
 
 .survey-section {
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 20px;
   border-radius: 8px;
-  color: black;
+  border: 1px solid white;
+  color: white;
 }
 
 .survey-section h2 {
@@ -63,6 +64,7 @@ body {
   margin-bottom: 10px;
   border-bottom: 2px solid #ccc;
   padding-bottom: 5px;
+  color: white;
 }
 
 .survey-statement {
@@ -72,10 +74,12 @@ body {
 .survey-statement p {
   margin: 0;
   font-weight: bold;
+  color: white;
 }
 
 .survey-statement label {
   margin-right: 10px;
+  color: white;
 }
 
 button {
@@ -95,17 +99,19 @@ button:hover {
 }
 
 .sidebar {
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 10px;
   border-radius: 8px;
+  border: 1px solid white;
 }
 
 .sidebar .list-group-item {
-  background-color: #ffffff;
+  background-color: transparent;
   border: none;
-  color: #1a237e;
+  color: white;
+  border-bottom: 1px solid white;
 }
 
 .sidebar .list-group-item:hover {
-  background-color: #e3f2fd;
+  background-color: rgba(255, 255, 255, 0.1);
 }
