@@ -173,7 +173,8 @@ function App() {
           <Sidebar survey={survey} setSelectedSection={setSelectedSection} />
         </div>
         <div className="col-md-9">
-          <h1 className="text-center my-4">Employee Satisfaction Survey</h1>
+          {/* Remove or comment out this line */}
+          {/* <h1 className="text-center my-4">Employee Satisfaction Survey</h1> */}
           <form onSubmit={handleSubmit}>
             <SurveySection section={selectedSection} />
             <button type="submit" className="btn btn-primary mt-3">Submit</button>
