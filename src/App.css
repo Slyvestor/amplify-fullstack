@@ -63,3 +63,19 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+.sidebar {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sidebar .list-group-item {
+  background-color: #ffffff;
+  border: none;
+  color: #1a237e;
+}
+
+.sidebar .list-group-item:hover {
+  background-color: #e3f2fd;
+}

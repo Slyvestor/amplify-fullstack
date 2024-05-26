@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import SurveySection from './components/SurveySection';
+import Sidebar from './components/Sidebar';
 
 const survey = [
   {
@@ -47,6 +48,7 @@ const survey = [
 
 function App() {
   const [responses, setResponses] = useState([]);
+  const [selectedSection, setSelectedSection] = useState(survey[0]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -65,19 +67,20 @@ function App() {
   return (
     <div className="App container-fluid">
       <Header />
-      <h1 className="text-center my-4">Employee Satisfaction Survey</h1>
-      <div className="row justify-content-center">
-        <div className="col-md-8">
+      <div className="row">
+        <div className="col-md-3">
+          <Sidebar survey={survey} setSelectedSection={setSelectedSection} />
+        </div>
+        <div className="col-md-9">
+          <h1 className="text-center my-4">Employee Satisfaction Survey</h1>
           <form onSubmit={handleSubmit}>
-            {survey.map((section, index) => (
-              <SurveySection key={index} section={section} />
-            ))}
+            <SurveySection section={selectedSection} />
             <button type="submit" className="btn btn-primary mt-3">Submit</button>
           </form>
+          <h2 className="mt-4">Survey Responses</h2>
+          <pre>{JSON.stringify(responses, null, 2)}</pre>
         </div>
       </div>
-      <h2 className="mt-4">Survey Responses</h2>
-      <pre>{JSON.stringify(responses, null, 2)}</pre>
     </div>
   );
 }
