@@ -8,16 +8,8 @@
   height: auto;
 }
 
-
 .App {
-  font-family: Arial, sans-serif;
-  max-width: 600px;
-  margin: 0 auto;
   padding: 20px;
-}
-
-h1 {
-  text-align: center;
 }
 
 .survey-section {

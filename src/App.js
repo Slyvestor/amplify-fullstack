@@ -41,15 +41,19 @@ function App() {
   };
 
   return (
-    <div className="App container">
+    <div className="App container-fluid">
       <Header />
       <h1 className="text-center my-4">Employee Satisfaction Survey</h1>
-      <form onSubmit={handleSubmit}>
-        {survey.map((section, index) => (
-          <SurveySection key={index} section={section} />
-        ))}
-        <button type="submit" className="btn btn-primary mt-3">Submit</button>
-      </form>
+      <div className="row justify-content-center">
+        <div className="col-md-8">
+          <form onSubmit={handleSubmit}>
+            {survey.map((section, index) => (
+              <SurveySection key={index} section={section} />
+            ))}
+            <button type="submit" className="btn btn-primary mt-3">Submit</button>
+          </form>
+        </div>
+      </div>
       <h2 className="mt-4">Survey Responses</h2>
       <pre>{JSON.stringify(responses, null, 2)}</pre>
     </div>
