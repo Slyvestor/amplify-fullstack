@@ -1,3 +1,15 @@
+body {
+  background-color: #4F8B9B;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  padding: 20px;
+  color: white; /* This ensures text is visible on the darker background */
+}
+
 .header {
   text-align: center;
   margin-bottom: 20px;
@@ -8,12 +20,12 @@
   height: auto;
 }
 
-.App {
-  padding: 20px;
-}
-
 .survey-section {
   margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  color: black; /* Ensures the text within the sections is readable */
 }
 
 .survey-section h2 {
