@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import SurveySection from './components/SurveySection';
 import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 
 const survey = [
   {
