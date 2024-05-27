@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './App.css';
 import Header from './components/Header';
 import SurveySection from './components/SurveySection';
 import Sidebar from './components/Sidebar';
-
 
 const survey = [
   {
@@ -146,7 +146,7 @@ function App() {
   const [responses, setResponses] = useState([]);
   const [selectedSection, setSelectedSection] = useState(survey[0]);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
     const newResponses = survey.map(section => ({
@@ -156,7 +156,16 @@ function App() {
         response: data.get(statement)
       }))
     }));
-    setResponses(newResponses);
+
+    try {
+      const response = await axios.post('https://jjvq6hf668.execute-api.eu-west-1.amazonaws.com/dev/Feedback', newResponses);
+      setResponses(newResponses);
+      alert('Survey responses saved successfully!');
+    } catch (error) {
+      console.error('Error saving survey responses:', error);
+      alert('Error saving survey responses. Please try again.');
+    }
+
     event.target.reset();
   };
 
@@ -168,8 +177,6 @@ function App() {
           <Sidebar survey={survey} setSelectedSection={setSelectedSection} />
         </div>
         <div className="col-md-9">
-          {/* Remove or comment out this line */}
-          {/* <h1 className="text-center my-4">Employee Satisfaction Survey</h1> */}
           <form onSubmit={handleSubmit}>
             <SurveySection section={selectedSection} />
             <button type="submit" className="btn btn-primary mt-3">Submit</button>
