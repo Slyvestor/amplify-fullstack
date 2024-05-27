@@ -158,11 +158,11 @@ function App() {
     }));
 
     try {
-      const response = await axios.post('https://jjvq6hf668.execute-api.eu-west-1.amazonaws.com/dev/Feedback', newResponses);
+      const response = await axios.post('https://ys2oc1l6uh.execute-api.eu-west-1.amazonaws.com/dev/Feedback', newResponses);
       setResponses(newResponses);
       alert('Survey responses saved successfully!');
     } catch (error) {
-      console.error('Error saving survey responses:', error);
+      console.error('Error saving survey responses:', error.response ? error.response.data : error.message);
       alert('Error saving survey responses. Please try again.');
     }
 
